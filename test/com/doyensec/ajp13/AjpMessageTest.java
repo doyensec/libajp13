@@ -277,15 +277,15 @@ public class AjpMessageTest
         headers.add(Pair.make("Content-Type", "text/html; charset=utf-8"));
         AjpMessage forwardRequest = new ForwardRequestMessage(2, new URL("http://127.0.0.1/"), headers, null);
         byte[] forwardRequestBytes = forwardRequest.getBytes();
-        assertThat(forwardRequestBytes.length, is(89));
+        assertThat(forwardRequestBytes.length, is(88));
 
         forwardRequest = ForwardRequestMessage.ForwardRequestMessageGetBuilder(new URL("http://192.168.1.1/log/"));
         forwardRequestBytes = forwardRequest.getBytes();
-        assertThat(forwardRequestBytes.length, is(85));
+        assertThat(forwardRequestBytes.length, is(84));
 
         forwardRequest = ForwardRequestMessage.ForwardRequestMessagePostBuilder(new URL("http://192.168.1.1/log/"), 80);
         forwardRequestBytes = forwardRequest.getBytes();
-        assertThat(forwardRequestBytes.length, is(111));
+        assertThat(forwardRequestBytes.length, is(110));
 
         headers.add(Pair.make("CustomHeaderName", "CustomHeaderValue"));
         List<Pair<String, String>> attributes = new LinkedList<>();
@@ -306,6 +306,6 @@ public class AjpMessageTest
         headers.add(Pair.make("HeaderName4", "HeaderValue4"));
         AjpMessage forwardRequest = new ForwardRequestMessage(10, new URL("http://127.0.0.1/"), headers, null);
         byte[] forwardRequestBytes = forwardRequest.getBytes();
-        assertThat(forwardRequestBytes[58], is((byte) 4));
+        assertThat(forwardRequestBytes[57], is((byte) 4));
     }
 }

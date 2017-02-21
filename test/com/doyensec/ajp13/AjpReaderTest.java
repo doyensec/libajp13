@@ -385,7 +385,7 @@ public class AjpReaderTest
                 + "Header: host idm.ea-e.dc-os.de:8080\n"
                 + "Header: connection keep-alive\n"
                 + "Header: Transfer-Encoding chunked\n"
-                + "Attribute: route wrkIdm1\n"));
+                + "Attribute: jvm_route wrkIdm1\n"));
     }
 
     @Test

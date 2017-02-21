@@ -2,12 +2,12 @@
 
 **libajp13** is a fully featured open source library implementing the Apache JServ Protocol version 1.3 (ajp13), based on the [Apache Protocol Reference](https://tomcat.apache.org/connectors-doc/ajp/ajpv13a.html).
 
-The library has been developed from Espen Wiborg's [ajp_client](https://github.com/espenhw/ajp-client), licensed under the Apache License 2.0. At this point, most of the code has been refactored and improved to support *all* AJP13 packet types.  
+The library has been developed from Espen Wiborg's [ajp_client](https://github.com/espenhw/ajp-client). At this point, most of the code has been refactored and improved to support *all* AJP13 packet types.  
 
 ![AJP13 in Wireshark](http://i.imgur.com/e9wTKDS.png "AJP13 in Wireshark")
 
 As of 02/27/2017, the JaCoCoverage analysis of project "libajp13" reports: 
-![Test Code Coverage](http://i.imgur.com/ADD_HERE_TCOVERAGE.png"Test Code Coverage")
+![Test Code Coverage](http://i.imgur.com/EWM7q7a.png "Test Code Coverage")
 
 ### Issues
 This implementation is derived from Dan Milstein's reversing work, based on Tomcat 3.x AJP code. If you've discovered a bug, please open an issue in Github.
