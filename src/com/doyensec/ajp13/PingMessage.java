@@ -13,7 +13,7 @@ package com.doyensec.ajp13;
  * <p>
  * This is different from a CPing message
  *
- * @TODO Reverse any implementation of the ping type handler
+ * TODO - Reverse any implementation of the ping type handler
  */
 public class PingMessage
         extends AbstractAjpMessage
@@ -22,7 +22,6 @@ public class PingMessage
     /**
      * PingMessage constructor
      *
-     * @return Instance of PingMessage
      */
     public PingMessage()
     {

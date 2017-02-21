@@ -18,7 +18,6 @@ public class CPingMessage
     /**
      * CPingMessage constructor
      *
-     * @return Instance of CPingMessage
      */
     public CPingMessage()
     {

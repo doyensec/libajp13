@@ -24,8 +24,8 @@ final public class AjpReader
     /**
      * Parse and create an AJP message from an array of bytes
      *
-     * @param bytes[] Message
-     * @throws IOException
+     * @param reply bytes[] Message
+     * @throws IOException Generic IOException
      * @return Instance of AjpMessage
      */
     static public AjpMessage parseMessage(byte[] reply) throws IOException
@@ -149,7 +149,7 @@ final public class AjpReader
     /**
      * Convert a byte array to a string representation of hex values
      *
-     * @param bytes[] input (e.g. [65,..])
+     * @param raw bytes[] input (e.g. [65,..])
      * @return input converted as string representation of hex values (e.g. [41,..])
      */
     public static String getHex(byte[] raw)
@@ -168,7 +168,7 @@ final public class AjpReader
     /**
      * Convert a string representation of hex values to byte array
      *
-     * @param String input (e.g. "41")
+     * @param s String input (e.g. "41")
      * @return input converted as byte array (e.g. [65,..])
      */
     public static byte[] toHex(String s)

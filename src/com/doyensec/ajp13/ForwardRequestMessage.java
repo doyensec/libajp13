@@ -43,12 +43,11 @@ public class ForwardRequestMessage
     /**
      * Simplified ForwardRequestMessage constructor
      *
-     * @param int The HTTP verb
-     * @param URL The message URL
+     * @param method int The HTTP verb
+     * @param url URL The message URL
      * @param headers The request HTTP headers
      * @param attributes The request HTTP attributes
-     * @throws UnknownHostException
-     * @return Instance of ForwardRequestMessage
+     * @throws UnknownHostException Generic UnknownHostException
      */
     public ForwardRequestMessage(int method, URL url,
             List<Pair<String, String>> headers,
@@ -67,17 +66,16 @@ public class ForwardRequestMessage
     /**
      * Complete ForwardRequestMessage constructor
      *
-     * @param int The HTTP verb
-     * @param String The HTTP protocol version (HTTP/1.0 or HTTP/1.1)
-     * @param String The request path (e.g. /logs/)
-     * @param String The client's IP address (e.g. web server's IP)
-     * @param String The client's hostname (e.g. web server's hostname)
-     * @param String The server's IP domain name (e.g. container's FQDN)
-     * @param int The server's TCP port
-     * @param boolean Does it use SSL?
+     * @param method int The HTTP verb
+     * @param protocol String The HTTP protocol version (HTTP/1.0 or HTTP/1.1)
+     * @param requestUri String The request path (e.g. /logs/)
+     * @param remoteAddr String The client's IP address (e.g. web server's IP)
+     * @param remoteHost String The client's hostname (e.g. web server's hostname)
+     * @param serverName String The server's IP domain name (e.g. container's FQDN)
+     * @param serverPort int The server's TCP port
+     * @param isSsl boolean Does it use SSL?
      * @param headers The request HTTP headers
      * @param attributes The request HTTP attributes
-     * @return Instance of ForwardRequestMessage
      */
     public ForwardRequestMessage(int method, String protocol, String requestUri,
             String remoteAddr, String remoteHost, String serverName,
@@ -160,8 +158,8 @@ public class ForwardRequestMessage
      * ForwardRequestMessageGetBuilder. An easy way to create ForwardRequest
      * messages for HTTP GET request
      *
-     * @param URL The message URL
-     * @throws UnknownHostException
+     * @param url URL The message URL
+     * @throws UnknownHostException Generic UnknownHostException
      * @return Instance of ForwardRequestMessage
      */
     static public ForwardRequestMessage ForwardRequestMessageGetBuilder(URL url) throws UnknownHostException
@@ -173,9 +171,9 @@ public class ForwardRequestMessage
      * ForwardRequestMessagePostBuilder. An easy way to create ForwardRequest
      * messages for HTTP POST request
      *
-     * @param URL The message URL
-     * @param int The expected Content-Length
-     * @throws UnknownHostException
+     * @param url URL The message URL
+     * @param contentLength int The expected Content-Length
+     * @throws UnknownHostException Generic UnknownHostException
      * @return Instance of ForwardRequestMessage
      */
     static public ForwardRequestMessage ForwardRequestMessagePostBuilder(URL url, int contentLength) throws UnknownHostException
@@ -271,7 +269,7 @@ public class ForwardRequestMessage
     /**
      * Returns the message HTTP headers
      *
-     * @return the message's headers as List<Pair<String, String>>
+     * @return the message's headers as List[Pair[String, String]]
      */
     public List<Pair<String, String>> getHeaders()
     {

@@ -18,7 +18,6 @@ public class CPongMessage
     /**
      * CPongMessage constructor
      *
-     * @return Instance of CPongMessage
      */
     public CPongMessage()
     {

@@ -23,9 +23,7 @@ public class GetBodyChunkMessage
     /**
      * GetBodyChunkMessage constructor
      *
-     * @param int The expected body chunk message size
-     * @throws IOException
-     * @return Instance of GetBodyChunkMessage
+     * @param length int The expected body chunk message size
      */
     public GetBodyChunkMessage(int length)
     {

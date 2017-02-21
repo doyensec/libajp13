@@ -26,8 +26,7 @@ public class BodyMessage
      * BodyMessage constructor
      *
      * @param bytes[] The body message content (data request)
-     * @throws IOException
-     * @return Instance of BodyMessage
+     * @throws IOException Generic IOException
      */
     public BodyMessage(byte[] bytes) throws IOException
     {

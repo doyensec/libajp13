@@ -23,8 +23,8 @@ public class Pair<T, U>
     /**
      * Pair constructor
      *
-     * @param T Left element
-     * @param U Right element
+     * @param a T Left element
+     * @param b U Right element
      */
     public Pair(T a, U b)
     {
@@ -35,8 +35,10 @@ public class Pair<T, U>
     /**
      * Create a new Pair given the left and right elements
      *
-     * @param K Left element
-     * @param V Right element
+     * @param <K> k Left element
+     * @param <V> v Right element
+     * @param k K Left element
+     * @param v V Right element
      * @return Instance of Pair
      */
     public static <K, V> Pair<K, V> make(K k, V v)

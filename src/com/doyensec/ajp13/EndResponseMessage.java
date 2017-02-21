@@ -23,9 +23,8 @@ public class EndResponseMessage
     /**
      * EndResponseMessage constructor
      *
-     * @param boolean A boolean flag to indicate whether the client (e.g. web
+     * @param reuse boolean A boolean flag to indicate whether the client (e.g. web
      * server) should close the TCP connection, or re-use the same
-     * @return Instance of EndResponseMessage
      */
     public EndResponseMessage(boolean reuse)
     {

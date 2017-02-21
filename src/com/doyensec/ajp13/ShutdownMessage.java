@@ -18,7 +18,6 @@ public class ShutdownMessage
     /**
      * ShutdownMessage constructor
      *
-     * @return Instance of ShutdownMessage
      */
     public ShutdownMessage()
     {

@@ -46,8 +46,8 @@ public abstract class AbstractAjpMessage implements AjpMessage
     /**
      * Write an AJP message to a given OutputStream
      *
-     * @param OutputStream Destination output stream
-     * @throws IOException
+     * @param out Destination output stream
+     * @throws IOException Generic IOException
      */
     @Override
     public void writeTo(OutputStream out) throws IOException

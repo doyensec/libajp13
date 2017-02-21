@@ -26,8 +26,7 @@ public class SendBodyChunkMessage
      * SendBodyChunkMessage constructor
      *
      * @param bytes[] The body chunk message content
-     * @throws IOException
-     * @return Instance of SendBodyChunkMessage
+     * @throws IOException Generic IOException
      */
     public SendBodyChunkMessage(byte[] bytes) throws IOException
     {

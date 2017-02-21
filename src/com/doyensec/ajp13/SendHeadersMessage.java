@@ -30,9 +30,8 @@ public class SendHeadersMessage
      *
      * @param statusCode The HTTP status code (e.g. 200)
      * @param statusMessage The status message (e.g. OK)
-     * @param headers A list of Pair<String, String>> containing all headers
-     * @throws IOException
-     * @return Instance of SendHeadersMessage
+     * @param headers A list of Pair[String, String] containing all headers
+     * @throws IOException Generic IOException
      */
     public SendHeadersMessage(int statusCode, String statusMessage, List<Pair<String, String>> headers) throws IOException
     {
@@ -84,7 +83,7 @@ public class SendHeadersMessage
     /**
      * Returns the message HTTP headers
      *
-     * @return the message's headers as List<Pair<String, String>>
+     * @return the message's headers as List[Pair[String, String]]
      */
     public List<Pair<String, String>> getHeaders()
     {
