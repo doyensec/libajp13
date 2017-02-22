@@ -6,11 +6,11 @@ The library has been developed from Espen Wiborg's [ajp_client](https://github.c
 
 ![AJP13 in Wireshark](http://i.imgur.com/e9wTKDS.png "AJP13 in Wireshark")
 
-As of 02/27/2017, the JaCoCoverage analysis of project "libajp13" reports: 
-![Test Code Coverage](http://i.imgur.com/fAnN4zC.png "Test Code Coverage")
-
 ### Issues
 This implementation is derived from Dan Milstein's reversing work, based on Tomcat 3.x AJP code. If you've discovered a bug, please open an issue in Github.
+
+As of 02/27/2017, the JaCoCoverage analysis of project "libajp13" reports: 
+![Test Code Coverage](http://i.imgur.com/fAnN4zC.png "Test Code Coverage")
 
 ### How To Use it
 The following code examples show how to use *libajp13*. 
