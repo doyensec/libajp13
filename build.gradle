@@ -1,0 +1,31 @@
+apply plugin: 'java-library'
+
+repositories {
+    jcenter()
+}
+
+version = '1.0.0'
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test'
+        }
+    }
+}
