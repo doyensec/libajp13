@@ -41,3 +41,6 @@ coverage/
 *.ipr
 **/*~
 /target/
+
+#gradle specific
+.gradle
