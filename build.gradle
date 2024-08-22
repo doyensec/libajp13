@@ -1,10 +1,16 @@
-apply plugin: 'java-library'
-
-repositories {
-    jcenter()
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
 }
 
+group = 'com.doyensec'
 version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
 
 dependencies {
     testImplementation 'junit:junit:4.12'
@@ -12,20 +18,61 @@ dependencies {
 
 jar {
     manifest {
-        attributes('Implementation-Title': project.name,
-                'Implementation-Version': project.version)
+        attributes(
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version
+        )
     }
 }
 
-sourceSets {
-    main {
-        java {
-            srcDir 'src/main'
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            pom {
+                name = 'libajp13'
+                description = 'libajp13 is a fully featured open source library implementing the Apache JServ Protocol version 1.3 (ajp13), based on the Apache Protocol Reference. The library has been developed from Espen Wiborg\'s ajp_client. At this point, most of the code has been refactored and improved to support all AJP13 packet types.'
+                url = 'https://github.com/doyensec/libajp13/'
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'doyensec'
+                        name = 'Doyensec Maven'
+                        email = 'maven@doyensec.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/doyensec/libajp13.git'
+                    developerConnection = 'scm:git:ssh://github.com/doyensec/libajp13.git'
+                    url = 'https://github.com/doyensec/libajp13/'
+                }
+            }
         }
     }
-    test {
-        java {
-            srcDir 'src/test'
+
+    repositories {
+        maven {
+            name = 'sonatype'
+            url = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+
+            credentials {
+                username = project.findProperty("ossrhUsername") ?: ""
+                password = project.findProperty("ossrhPassword") ?: ""
+            }
         }
     }
+}
+
+signing {
+    useGpgCmd()
+    sign publishing.publications.mavenJava
 }
